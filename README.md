@@ -1,5 +1,7 @@
 # Video Comment Sentiment Analyzer
 
+Youtube link-https://youtu.be/a_uKBK-ZSVY
+
 A Chrome extension for YouTube that:
 - Collects comments from the current video page
 - Classifies each comment into `POSITIVE`, `NEUTRAL`, `NEGATIVE`, `TOXIC`, or `SPAM` using Gemini
