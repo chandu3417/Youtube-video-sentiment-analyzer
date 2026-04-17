@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Comment Sentiment Analyzer</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hero">
+        <p class="kicker">VIDEO SENTIMENT ANALYZER</p>
+        <h1>Audience Mood Dashboard</h1>
+        <p>Reads YouTube comments and visualizes sentiment in seconds.</p>
+      </header>
+
+      <section class="card controls">
+        <p>Analyzes the first 50 visible comments for fast insights.</p>
+        <button id="analyzeBtn" type="button">Analyze Current YouTube Video</button>
+      </section>
+
+      <section class="card loading" id="loadingCard" hidden>
+        <p id="loadingText">Collecting comments...</p>
+      </section>
+
+      <section class="card error" id="errorCard" hidden>
+        <h2>Could not analyze</h2>
+        <p id="errorText"></p>
+      </section>
+
+      <section class="card dashboard" id="dashboard" hidden>
+        <h2 id="videoTitle">Video title</h2>
+        <p id="videoMeta">Channel · URL</p>
+
+        <div class="stats">
+          <div>
+            <span class="label">Overall mood</span>
+            <strong id="overallMood">-</strong>
+          </div>
+          <div>
+            <span class="label">Positivity score</span>
+            <strong id="positivityScore">0</strong>
+          </div>
+          <div>
+            <span class="label">Comments analyzed</span>
+            <strong id="totalAnalyzed">0</strong>
+          </div>
+        </div>
+
+        <div class="viz-grid">
+          <div class="bars" id="barChart"></div>
+        </div>
+
+        <h3>Quick insights</h3>
+        <ul id="insights"></ul>
+      </section>
+    </main>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
